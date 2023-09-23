@@ -1,4 +1,4 @@
-# This program is placed into the public domain.
+##This program is placed into the public domain.
 
 """
 Gets the current version number.
@@ -8,7 +8,7 @@ Otherwise it is the one contained in the PKG-INFO file.
 To use this script, simply import it in your setup.py file
 and use the results of get_version() as your package version:
 
-    from version import *
+    from version import  
 
     setup(
         ...
@@ -32,7 +32,7 @@ def get_version():
 
     if isdir(join(d, '.git')):
         # Get the version using "git describe".
-        cmd = 'git describe --tags --match [0-9]*'.split()
+        cmd = 'git describe --tags --match [0-9] '.split()
         try:
             version = subprocess.check_output(cmd).decode().strip()
         except subprocess.CalledProcessError:
@@ -69,4 +69,4 @@ def get_version():
 
 
 if __name__ == '__main__':
-    print(get_version())
+    print(get_version()) 
